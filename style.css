@@ -61,6 +61,9 @@
   .head1 {
     font-size: 35px;
   }
+  .album-title {
+    font-size: 50px;
+  }
 }
 @media (min-width: 768px) {
   .order-col {
@@ -90,6 +93,9 @@
   }
   .head1 {
     font-size: 50px;
+  }
+  .album-title {
+    font-size: 100px;
   }
 }
 
@@ -299,33 +305,6 @@ ul li a:hover:before {
 .head2 {
   font-family: "Futura Lt BT";
 }
-
-#fading img.top {
-  -webkit-animation-name: FadeInOut;
-  -webkit-animation-timing-function: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-duration: 10s;
-  -webkit-animation-direction: alternate;
-}
-@keyframes FadeInOut {
-  0% {
-    opacity: 1;
-  }
-  25% {
-    opacity: 0.75;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-#fading img {
-  position: relative;
-  left: 0;
-}
-
 .tran {
   transition: 500s ease-in-out;
 }
@@ -333,4 +312,15 @@ ul li a:hover:before {
 .contact-img {
   display: flex;
   justify-content: center;
+}
+
+.album-title {
+  font-family: "Allura", cursive;
+}
+
+.album-cover {
+  transition: transform 0.8s;
+}
+.album-cover:hover {
+  transform: scale(1.1);
 }
