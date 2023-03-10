@@ -3,6 +3,7 @@
   padding: 20px;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  font-style: italic;
 }
 
 .content {
@@ -173,6 +174,7 @@ ul li a:hover:before {
   .navbar-brand > .brand-img {
     max-width: 100px;
   }
+
   .navbar-collapse {
     background-color: #4f4e4e !important;
   }
@@ -187,11 +189,10 @@ ul li a:hover:before {
 
   /* ---------------- */
   .carousel-item {
-    height: 400px;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   }
 
   .carousel-item p {
@@ -199,44 +200,8 @@ ul li a:hover:before {
     font-size: 16px;
   }
 
-  .testimonial-author {
-    margin-top: 10px;
-    font-size: 14px;
-    font-style: italic;
-  }
-
-  .carousel-control-prev,
-  .carousel-control-next {
-    width: 50px;
-    height: 50px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 50%;
-    color: #fff;
-    text-align: center;
-    font-size: 36px;
-    line-height: 50px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .carousel-control-prev:hover,
-  .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    display: inline-block;
-  }
-
-  .carousel-control-prev {
-    left: 0;
-  }
-
-  .carousel-control-next {
-    right: 0;
+  .carousel-item > h5 {
+    font-style: italic !important;
   }
 
   /*-------------------  */
@@ -265,11 +230,15 @@ ul li a:hover:before {
   .album-title {
     font-size: 50px;
   }
+  .social-media-logo {
+    max-width: 50px;
+  }
 }
 @media (min-width: 768px) {
   .navbar-brand > .brand-img {
     max-width: 200px;
   }
+
   .order-col {
     order: 1 !important;
   }
@@ -301,108 +270,17 @@ ul li a:hover:before {
   .album-title {
     font-size: 100px;
   }
+
+  .social-media-logo {
+    max-width: 50px;
+  }
 }
 
 /* / */
 
-.testimonials-clean {
-  color: #2e2e2e;
-  background-color: #ffffff;
-}
-
-.testimonials-clean p {
-  color: #4f4e4e;
-}
-
-.testimonials-clean h2 {
-  font-weight: bold;
-  margin-bottom: 40px;
-  padding-top: 40px;
-  color: inherit;
-}
-
-@media (max-width: 767px) {
-  .testimonials-clean h2 {
-    margin-bottom: 25px;
-    padding-top: 25px;
-    font-size: 24px;
-  }
-}
-
-.testimonials-clean .intro {
-  font-size: 16px;
-  max-width: 500px;
-  margin: 0 auto;
-  font-family: "Futura MdCn BT";
-}
-
-.testimonials-clean .intro p {
-  margin-bottom: 0;
-}
-
-.testimonials-clean .people {
-  padding: 50px 0 20px;
-  font-family: "Futura Lt BT";
-}
-
-.testimonials-clean .item {
-  margin-bottom: 32px;
-}
-
-@media (min-width: 768px) {
-  .testimonials-clean .item {
-    height: 220px;
-    margin-top: 50px;
-  }
-}
-
-.testimonials-clean .item .box {
-  padding: 30px;
-  background-color: rgb(235, 255, 226);
-  position: relative;
-}
-
-.testimonials-clean .item .box:after {
-  content: "";
-  position: absolute;
-  left: 30px;
-  bottom: -24px;
-  width: 0;
-  height: 0;
-  border: 15px solid transparent;
-  border-width: 12px 15px;
-  border-top-color: #fff;
-}
-
-.testimonials-clean .item .author {
-  margin-top: 28px;
-  padding-left: 25px;
-}
-
-.testimonials-clean .item .name {
-  font-weight: bold;
-  margin-bottom: 2px;
-  color: inherit;
-  text-decoration: underline;
-  text-align: center;
-}
-
-.testimonials-clean .item .title {
-  font-size: 13px;
-  color: #9da9ae;
-  text-align: center;
-}
-
-.testimonials-clean .item .description {
-  font-size: 15px;
-  margin-bottom: 0;
-}
-
-.testimonials-clean .item img {
-  max-width: 40px;
-  float: left;
-  margin-right: 12px;
-  margin-top: -5px;
+.logo-img {
+  min-width: 100px;
+  max-width: 200px;
 }
 
 .footer-content-1 {
