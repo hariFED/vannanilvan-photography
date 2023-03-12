@@ -1,0 +1,170 @@
+.navbar-nav .imgs-change {
+  width: 510px;
+  height: auto;
+  z-index: 1;
+  box-shadow: 5px 5px 5px 5px #888;
+}
+ul li {
+  list-style: none;
+  font-family: "Futura Lt BT";
+}
+ul li a {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  margin: 20px 0;
+  padding: 10px 20px;
+  text-decoration: none;
+
+  font-family: "Futura Lt BT";
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  transition: 0.5s;
+  z-index: 1;
+}
+.contant-about {
+  font-family: "Futura Lt BT";
+}
+.contant-about::first-line {
+  font-size: 24px;
+  font-weight: 600;
+}
+.owner-photo {
+  background: #f8f8f8;
+  border: solid #bdbdbd 1px;
+  box-shadow: 0 0 51px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 0 0 51px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 0 0 51px rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  .navbar-brand > .brand-img {
+    max-width: 50px;
+  }
+  .navbar-collapse {
+    background-color: #4f4e4e !important;
+  }
+  .imgchange {
+    width: 350px;
+  }
+  .navbar-collapse {
+    background-color: white !important;
+    text-align: center;
+  }
+  .owner-photo {
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-brand > .brand-img {
+    max-width: 100px;
+  }
+  .owner-photo {
+    max-width: 80%;
+  }
+}
+
+/*--------------------------------------------*/
+
+.navigation {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuToggle {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: #fff;
+  border-radius: 70px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+}
+
+.menuToggle::before {
+  content: "+";
+  position: absolute;
+  font-size: 2.8em;
+  font-weight: 550;
+  color: #087fe0;
+  transition: 1.5s;
+}
+
+.menuToggle.active::before {
+  transform: rotate(315deg);
+}
+
+.menu {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #fff;
+  border-radius: 70px;
+  z-index: -1;
+  transition: transform 0.5s, width 0.5s, height 0.5s;
+  transition-delay: 1s, 0.5s, 0.5s;
+  transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.menuToggle.active ~ .menu {
+  width: 270px;
+  height: 70px;
+  z-index: 1;
+  transform: translateY(-80px);
+  transition-delay: 0s, 0.5s, 0.5s;
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.menu::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  left: calc(50% - 8px);
+  bottom: 4px;
+  transform: rotate(45deg);
+  border-radius: 2px;
+  transition: 0.5s;
+}
+
+.menuToggle.active ~ .menu::before {
+  transition-delay: 0.5s;
+  bottom: -6px;
+}
+
+.menu > ul {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  gap: 30px;
+}
+
+.menu > ul > li {
+  list-style: none;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-30px);
+  transition: 0.25s;
+  transition-delay: calc(0s + var(--i));
+}
+
+.menuToggle.active ~ .menu > ul > li {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+  transition-delay: calc(0.75s + var(--i));
+}
+
+.menu > ul > li > a {
+  display: block;
+  font-size: 1.5rem !important;
+}
