@@ -22,7 +22,8 @@ ul li a {
   transition: 0.5s;
   z-index: 1;
 }
-.contant-about {
+.contant-about,
+.about-business {
   font-family: "Futura Lt BT";
 }
 .contant-about::first-line {
@@ -184,3 +185,31 @@ ul li a {
   display: block;
   font-size: 1.5rem !important;
 }
+
+.about-business > .container {
+}
+
+.logo-img {
+  min-width: 100px;
+  max-width: 200px;
+}
+@media (max-width: 768px) {
+  .social-media-logo {
+    max-width: 50px !important;
+  }
+  .head1 {
+    font-size: 35px;
+  }
+}
+
+@media (min-width: 768px) {
+  .social-media-logo {
+    max-width: 50px !important;
+  }
+  .head1 {
+    font-size: 40px;
+  }
+}
+
+
+
